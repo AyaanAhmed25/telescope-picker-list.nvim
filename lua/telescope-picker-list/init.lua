@@ -37,14 +37,14 @@ for _, v in ipairs(user_pickers) do
 	}
 end
 
-for name, item in pairs(builtin_pickers) do
-	if not (vim.tbl_contains(excluded, name)) then
-		M.results[name] = {
-			action = funcs[name] or item or function() end,
-			opt = plugin_opts[name] or opts_pickers,
-		}
-	end
-end
+-- for name, item in pairs(builtin_pickers) do
+-- 	if not (vim.tbl_contains(excluded, name)) then
+-- 		M.results[name] = {
+-- 			action = funcs[name] or item or function() end,
+-- 			opt = plugin_opts[name] or opts_pickers,
+-- 		}
+-- 	end
+-- end
 
 for extension in pairs(extensions_pickers.manager) do
 	M.register(extension)

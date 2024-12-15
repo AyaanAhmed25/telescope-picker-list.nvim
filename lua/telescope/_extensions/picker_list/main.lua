@@ -17,7 +17,7 @@ M.picker_list = function(opts)
 	pickers
 		.new(opts_list_picker or {}, {
 			prompt_title = "Pickers",
-			results_title = "Picker",
+			results_title = "",
 			finder = finders.new_table({
 				results = vim.tbl_keys(M.results),
 			}),
